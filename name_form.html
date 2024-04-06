@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<style>
+  
+  h1 {
+    text-align: center;
+  }
+
+  body {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<body>
+  <h1>Submit A Comment</h1>
+      <form action="/db.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="20"><br><br>
+        <textarea row="4" cols="50" maxlength="200" name="comment" id="comment" placeholder="Enter a comment..."></textarea><br>
+        <input type="submit" value="Post"><br><br>
+      </form>
+</body>
+</html>
