@@ -46,12 +46,25 @@
 
   $result = $conn->query($sql);
 
-  while ($row = $result->fetch_assoc()){
-    echo "Name: " . $row["Name"] . "<br>" . "Comment: " . $row["Comment"] ."<br><br>";
-  }
-
   $conn->close();
+?>
 
-  ?>
+<script>
+
+while ($row = $result->fetch_assoc()){
+  var table = document.getElementById("myTable");
+  var row = document.createElement("tr");
+
+  var userName = document.createElement("td");
+  userName.textContent = $row['Name'];
+  row.appendChild(userName);
+
+  var comment = document.createElement("td");
+  comment.textContent = $row['Comment'];
+  row.appendChild(comment);
+
+  table.appendChild(row);
+}
+  </script>
 
 </html>
