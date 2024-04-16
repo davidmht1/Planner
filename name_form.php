@@ -5,25 +5,61 @@
   <title>David's Website</title>
 </head>
 <style>
-  .title,
+
+input[type=text], textarea,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  div.scrollmenu {
+    background-color: #153a49;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+    margin: 40px;
+    border-radius: 5px;
+  }
+
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  div.scrollmenu a:hover {
+    background-color: #789e9d;
+  }
+
+  body {
+    background-color: #f4eee5;
+    font-family: Arial, Helvetica, sans-serif
+  }
+
+  div.scrollmenu,
   form {
-    margin: 70px;
+    margin: 40px;
   }
 
-  .title {
-    font-size: 30px
-  }
-
-  .container {
+  .myImage {
     position: relative;
     text-align: center;
-    text-shadow: 5px;
-    font-size: 30px;
+    text-shadow: black 0px 0px 2px;
+    font-size: 40px;
     height: 500px;
-    background-size: 1500px;
-    background-position: center;
     background-image: url(minimalist_background.jpg);
-    
+    background-size: 2100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 25px;
   }
 
   .centered {
@@ -31,23 +67,30 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    outline: black;
+    color: white;
   }
 </style>
 
 <body>
-  <div class="title">
-    <p>Sample Text</p>
+
+  <div class="scrollmenu">
+    <a href="#top">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
   </div>
 
-  <div class="container">
-    <div class="centered">Sample Text</div>
+  <div class="myImage">
+    <div class="centered">David's Website</div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <form>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" maxlength="20"><br><br>
+    <input type="text" id="name" name="name" maxlength="20" width="200px;"><br><br>
+    <label for="textarea">Comment:</label>
     <textarea row="4" cols="50" maxlength="20" name="comment" id="comment"
       placeholder="Enter a comment..."></textarea><br>
     <input type="submit" value="Post"><br><br>
@@ -58,6 +101,7 @@
   </table>
 </body>
 
+<!--
 <?php
 $servername = "";
 $username = "admin";
@@ -83,6 +127,7 @@ echo '</table>';
 
 $conn->close();
 ?>
+-->
 
 <script>
   $(document).ready(function () {
