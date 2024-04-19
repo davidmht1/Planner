@@ -101,7 +101,6 @@ select {
   </table>
 </body>
 
-<!--
 <?php
 $servername = "";
 $username = "admin";
@@ -127,7 +126,6 @@ echo '</table>';
 
 $conn->close();
 ?>
--->
 
 <script>
   $(document).ready(function () {
